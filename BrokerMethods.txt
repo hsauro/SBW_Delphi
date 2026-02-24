@@ -1,0 +1,40 @@
+
+The BROKER service implements the services of the SBW Broker.
+
+DONE string getVersion() returns the version of the broker
+
+DONE int getModuleInstance(string) returns the module identifier of the given name, or starts up a new module
+
+DONE {}[] getModuleDescriptors(boolean, boolean) returns an array of module descriptors. The flags are localOnly (search only for local modules) and includeRunning (search also running modules)
+
+DONE {} getModuleDescriptor(string, boolean) returns the module descriptor for the module with the given name, if the flag is true running modules will also be included in the search, otherwise only registered modules
+
+DONE {} getModuleDescriptor(int) returns the module descriptor for the module with the given id
+
+DONE {}[] findServices(string, boolean) returns an array of all services registered with a given category, the flag indicates whether services of subcategories should also be returned
+
+int[] getExistingModuleInstanceIds() returns an array of currently running module id's
+
+DONE {} getServiceDescriptor(int, string) returns the service descriptor with the given module id and service name
+
+DONE {} getServiceDescriptor(int, int) returns the service descriptor with the given module id and service id
+
+DONE {}[] getServiceDescriptors(string) returns the service descriptors of the module with the given name
+
+DONE {}[] getServiceDescriptors(int) returns the service descriptors of the module with the given identifier
+
+DONE void registerModule(string, string, int, string, string) registers a module with: moduleName, moduleDisplayName, moduleType, commandLine, help
+
+DONE void registerService(string, string, string, string, string) registers the service with: moduleName, serviceName, serviceDisplayName, category,help
+
+DONE void unregisterModule(string) unregisters the module with the given name
+
+DONE void shutdownBroker() shuts down the broker
+
+DONE {} getListOfModules() returns the ids and names of all currently running modules
+
+DONE {} getMethodIds(int,int) returns all method id's and names for the given module id and service id
+
+DONE {} getMethodIds(string,string) returns all method id's and names for the given module name and service name
+
+

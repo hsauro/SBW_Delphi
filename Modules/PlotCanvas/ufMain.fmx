@@ -1,0 +1,33 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Plotter Canvas'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = MainFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 81.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Label1: TLabel
+      Position.X = 40.000000000000000000
+      Position.Y = 32.000000000000000000
+      Text = 'Drawing Canvas'
+      TabOrder = 0
+    end
+  end
+  object SkPaintBox1: TSkPaintBox
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 399.000000000000000000
+    Size.PlatformDefault = False
+    OnDraw = SkPaintBox1Draw
+  end
+end

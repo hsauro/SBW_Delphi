@@ -1,0 +1,459 @@
+Object frmRunMethod: TfrmRunMethod
+  Left = 192
+  Top = 277
+  Caption = 'Run Method'
+  ClientHeight = 558
+  ClientWidth = 845
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+
+    Object Splitter1: TSplitter
+      Position.X = 297
+      Position.Y = 0
+      Height = 400
+      ExplicitHeight = 405
+      end
+
+    Object Panel1: TPanel
+      Position.X = 0
+      Position.Y = 478
+      Width = 845
+      Height = 80
+      Align = alBottom
+      TabOrder = 0
+      ExplicitTop = 483
+      ExplicitWidth = 853
+      DesignSize = (
+      845
+      80)
+
+        Object lblnTimes: TLabel
+          Position.X = 230
+          Position.Y = 13
+          Width = 6
+          Height = 13
+          Caption = '0'
+          end
+
+        Object lblTiming: TLabel
+          Position.X = 158
+          Position.Y = 47
+          Width = 25
+          Height = 13
+          Caption = 'msec'
+          end
+
+        Object Label1: TLabel
+          Position.X = 12
+          Position.Y = 47
+          Width = 50
+          Height = 13
+          Caption = 'Total Time'
+          end
+
+        Object Label2: TLabel
+          Position.X = 200
+          Position.Y = 48
+          Width = 27
+          Height = 13
+          Caption = 'Mean'
+          end
+
+        Object Label3: TLabel
+          Position.X = 315
+          Position.Y = 48
+          Width = 91
+          Height = 13
+          Caption = 'Standard Deviation'
+          end
+
+        Object btnClose: TButton
+          Position.X = 747
+          Position.Y = 8
+          Width = 75
+          Height = 25
+          Anchors = [akTop, akRight]
+          Cancel = True
+          Caption = 'Close'
+          Default = True
+          ModalResult = 1
+          TabOrder = 1
+          ExplicitLeft = 755
+          end
+
+        Object btnRun: TButton
+          Position.X = 661
+          Position.Y = 8
+          Width = 75
+          Height = 25
+          Anchors = [akTop, akRight]
+          Caption = '&Run'
+          TabOrder = 0
+          OnClick = btnRunClick
+          ExplicitLeft = 669
+          end
+
+        Object btnRunNTimes: TButton
+          Position.X = 88
+          Position.Y = 8
+          Width = 80
+          Height = 25
+          Caption = 'Run '#39'n'#39' times'#39
+          TabOrder = 2
+          OnClick = btnRunNTimesClick
+          end
+
+        Object edtRunNTimes: TEdit
+          Position.X = 174
+          Position.Y = 10
+          Width = 49
+          Height = 21
+          TabOrder = 3
+          Text = '1'
+          end
+
+        Object btnStop: TButton
+          Position.X = 16
+          Position.Y = 8
+          Width = 65
+          Height = 25
+          Caption = 'Stop'
+          TabOrder = 4
+          OnClick = btnStopClick
+          end
+
+        Object btnRunAndClose: TButton
+          Position.X = 560
+          Position.Y = 8
+          Width = 91
+          Height = 25
+          Anchors = [akTop, akRight]
+          Caption = 'Run and Close'
+          TabOrder = 5
+          OnClick = btnRunAndCloseClick
+          ExplicitLeft = 568
+          end
+
+        Object edtTiming: TEdit
+          Position.X = 68
+          Position.Y = 44
+          Width = 85
+          Height = 21
+          TabOrder = 6
+          Text = '0'
+          end
+
+        Object edtSD: TEdit
+          Position.X = 413
+          Position.Y = 44
+          Width = 73
+          Height = 21
+          TabOrder = 7
+          Text = '0'
+          end
+
+        Object edtMean: TEdit
+          Position.X = 234
+          Position.Y = 44
+          Width = 74
+          Height = 21
+          TabOrder = 8
+          Text = '0'
+          end
+      end
+
+    Object Panel2: TPanel
+      Position.X = 300
+      Position.Y = 0
+      Width = 545
+      Height = 400
+      Align = alClient
+      BorderWidth = 4
+      TabOrder = 1
+      ExplicitWidth = 553
+      ExplicitHeight = 405
+
+        Object resultMemoBox: TMemo
+          Position.X = 33
+          Position.Y = 5
+          Width = 515
+          Height = 395
+          Align = alClient
+          ReadOnly = True
+          ScrollBars = ssVertical
+          TabOrder = 0
+          OnKeyDown = resultMemoBoxKeyDown
+          end
+
+        Object Panel4: TPanel
+          Position.X = 5
+          Position.Y = 5
+          Width = 28
+          Height = 395
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+
+            Object btnCopyToClipboard: TSpeedButton
+              Position.X = 0
+              Position.Y = 8
+              Width = 23
+              Height = 22
+              Hint = 'Copy Results to Clipboard'
+              Glyph.Data = {
+              36050000424D3605000000000000360400002800000010000000100000000100
+              0800000000000001000000000000000000000001000000010000000000000101
+              0100020202000303030004040400050505000606060007070700080808000909
+              09000A0A0A000B0B0B000C0C0C000D0D0D000E0E0E000F0F0F00101010001111
+              1100121212001313130014141400151515001616160017171700181818001919
+              19001A1A1A001B1B1B001C1C1C001D1D1D001E1E1E001F1F1F00202020002121
+              2100222222002323230024242400252525002626260027272700282828002929
+              29002A2A2A002B2B2B002C2C2C002D2D2D002E2E2E002F2F2F00303030003131
+              3100323232003333330034343400353535003636360037373700383838003939
+              39003A3A3A003B3B3B003C3C3C003D3D3D003E3E3E003F3F3F00404040004141
+              4100424242004343430044444400454545004646460047474700484848004949
+              49004A4A4A004B4B4B004C4C4C004D4D4D004E4E4E004F4F4F00505050005151
+              5100525252005353530054545400555555005656560057575700585858005959
+              59005A5A5A005B5B5B005C5C5C005D5D5D00605E5D00645E5E00675F5F006A60
+              5F006D6060007061600073616100766160007A6160007D60600080605F008360
+              5F00855F5E00875F5E00885E5D00895E5D008A5E5D008A5D5D008A5D5C008B5D
+              5C008B5D5C008B5D5C008B5D5C008B5D5C008B5D5C008B5D5C008B5D5C008C5D
+              5C008C5D5C008C5E5D008F615F0093656300976967009B6E6A009E716D00A174
+              6F00A3767100A4777200A5787300A5787300A6797400A77A7400A97B7500AB7C
+              7500AD7E7500AE7E7500B07F7500B07F7500B1807600B2817600B2817700B282
+              7700B2827700B2827700B2837800B3847900B5867A00B7897B00BA8C7D00BB8E
+              7E00BD8F7F00BD918400BF8D8300C08A8600C1858B00C47C9200C96E9F00D25C
+              AF00DD45C400EB2BDC00FA10F500FC0AF900FD06FB00FE03FC00FE02FD00FE01
+              FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00
+              FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FF00FF00FE00
+              FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00
+              FE00FE00FE00FE01FD00FD03FB00FB06F900F90BF400F422DD00EF3EC100E95B
+              A400E56E9100E3807F00E18F7000E09A6300E1A15C00E2A35800E3A35600E4A3
+              5400E4A35300E4A35300E4A45400E4A45400E4A55500E5A55600E6A75800E7A9
+              5A00E8AB5E00E8AC6100E7AC6500E5AD6A00E5AE7000E4AE7500E3AE7A00E1AD
+              7E00E0AD8000DEAB8400DFAD8600E2B18A00E5B68E00E7BA9600E9BE9B00ECC5
+              A200F5CCA600F9D4B000FCDAB900FCDDBD00FDDFC100FDE1C500FCE3CA00FBE4
+              CF00FAE5D100FAE6D400F9E9D900F9EBDE00FBEEE200FBF1E700FCF4EA00FDF5
+              ED00FDF7F000FEF9F300FEF9F500FEFBF800FEFBF900FEFBF800B8B8B8B8B885
+              85858585858585857AB8B8B8B8B8B888F0EFEEECECEBEBEA7AB8B8B8B8B8B88A
+              F3D7D7D7D7D7D7EB7AB8B8B8B8B8B896F6F4F1F0EFEDECEB7AB8858585858598
+              F7D7D7D7D7D7D7EC7AB888F0EFEEEC9BF9F7F6F4F3F0EFEE7AB88AF3D7D7D79B
+              FBD7D7D7D7D7D7F07AB896F6F4F1F0E3FEFCFAF8F7F6F4F27AB898F7D7D7D7E3
+              FEFEFCFBF9F4E99B7AB89BF9F7F6F4E5FEFEFEFDFB8F8F8F8CB89BFBD7D7D7E6
+              FEFEFEFEFD8FDED2B8B8E3FEFCFAF8E6E3E3E3E3E38FDAB8B8B8E3FEFEFCFBF9
+              F4E99B7AB8B8B8B8B8B8E5FEFEFEFDFB8F8F8F8CB8B8B8B8B8B8E6FEFEFEFEFD
+              8FDED2B8B8B8B8B8B8B8E6E3E3E3E3E38FDAB8B8B8B8B8B8B8B8}
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = btnCopyToClipboardClick
+              end
+
+            Object btnSave: TSpeedButton
+              Position.X = 1
+              Position.Y = 38
+              Width = 23
+              Height = 22
+              Hint = 'Save Result to a File'
+              Glyph.Data = {
+              36050000424D3605000000000000360400002800000010000000100000000100
+              0800000000000001000000000000000000000001000000010000000000000101
+              0100020202000303030004040400050505000606060007070700080808000909
+              09000A0A0A000B0B0B000C0C0C000D0D0D000E0E0E000F0F0F00101010001111
+              1100121212001313130014141400151515001616160017171700181818001919
+              19001A1A1A001B1B1B001C1C1C001D1D1D001E1E1E001F1F1F00202020002121
+              210022222200232323002424240025252500262626002D282800352B2A003C2D
+              2C00432F2E0049313000533433005C3635006C3937007A3A3800833B3800893B
+              38008C3B38008F3B3800913A3800923A3700923A370093393600933836009338
+              3500933735009336340093363400933433009333320093323100922F2E00922D
+              2D00922C2B00922B2B00922B2B00922C2B00922D2C00922E2E0092302F009232
+              31009334330094373500943A3700953C3900953D3A00953F3B0097403D009841
+              3E009A423E009A423F009B423F009C4340009E4341009C4340009A433F009943
+              3F0098433F0097433F0097433F0096433F0096433F0095434000934541008F47
+              43008A4A4700854D4B007F524F0079575500735C5B006F6060006D6363006B66
+              66006A6A6A006B6B6B006C6C6C006D6D6D006E6E6E006F6F6F00707070007171
+              7100727272007373730074747400757575007676760077777700787878007979
+              79007A7A7A007B7B7B007C7C7C007D7D7D007E7E7E00817B7B008A7777009174
+              7400987171009E6E6E00A46B6B00A9696900AD676700B1666600B8646400BE63
+              6300C1626200C4636300C6636300C7646500C8646500C9646500CA656600CB66
+              6600CB666600CB666600CA666600CB666600CC666600CD666600CD666600CD66
+              6600CD666600CD656600CC656600CB656600CA656600CA666600C9666600C966
+              6600C8676700C8686800C86A6A00C86C6C00C76D6D00C66F6E00C6717000C574
+              7300C4787700C47C7B00C37F7E00C3858400C48A8A00C5919000C4969500C498
+              9800C2999900C59C9B00C89E9E00C9A0A000C9A3A300CAA8A800C9AEAE00CAB3
+              B300CAB9B900CBBDBE00CDC1C200CEC5C600CFC8C900CEC9CA00CEC9CA00CECA
+              CB00CECACB00CECBCB00CDCBCC00CDCBCC00CECBCC00CDCBCC00CECBCC00CECA
+              CC00CFC8CC00D2BECF00D6AED200DC94D900E27DDE00E961E500EF47EC00F335
+              F100F721F600FB0CFB00FD06FD00FE02FE00FE00FE00FE00FE00FE00FE00FE00
+              FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00
+              FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE00FE01FE00FE02FE00FD07
+              FD00FB1CFA00F641F600F169F100ED8CED00E9ACE900E6C5E600E5D4E400E4DA
+              E400E4E0E400E5E3E500E6E5E700E8E8E900ECECED00F0F1F100F5F5F500F7F7
+              F700F8F8F800F8F8F800F8F8F800F8F8F800F8F8F800F8F8F800DEDEDEDEDEDE
+              DEDEDEDEDEDEDEDEDEDEDEDE5B5BB2B2B2B2B2B2B2485BDEDEDEDE5B9A8CF243
+              43F4F3F2C943565BDEDEDE5B9B8AF34343F2F4F2C843565BDEDEDE5B9B8AF343
+              43F2F4F4C843565BDEDEDE5B9B8AF4F4F2F2F2F2C843565BDEDEDE5B9B8CA2A8
+              A8A48BA59F8B9B5BDEDEDE5B88ABB4B7B7B7B5B5B7B7965BDEDEDE5B96FFFFFF
+              FFFFFFFFFFFF965BDEDEDE5B96FFFFFFFFFFFFFFFFFF965BDEDEDE5B96FFC7C7
+              C7C7C7C7C7FF965BDEDEDE5B96FFFFFFFFFFFFFFFFFF965BDEDEDE5B96FFC7C7
+              C7C7C7C7C7FF965BDEDEDE5B96FFFFFFFFFFFFFFFFFF965BDEDEDEDE5BFFFFFF
+              FFFFFFFFFFFF5BDEDEDEDEDEDEDEDEDEDEDEDEDEDEDEDEDEDEDE}
+              ParentShowHint = False
+              ShowHint = True
+              OnClick = btnSaveClick
+              end
+          end
+      end
+
+    Object Panel3: TPanel
+      Position.X = 0
+      Position.Y = 400
+      Width = 845
+      Height = 78
+      Align = alBottom
+      TabOrder = 2
+      ExplicitTop = 405
+      ExplicitWidth = 853
+
+        Object lblRunMethod: TLabel
+          Position.X = 8
+          Position.Y = 6
+          Width = 66
+          Height = 13
+          Caption = 'lblRunMethod'
+          end
+
+        Object lblHelpStr: TLabel
+          Position.X = 8
+          Position.Y = 22
+          Width = 22
+          Height = 13
+          Caption = 'Help'
+          end
+
+        Object lblStatus: TLabel
+          Position.X = 8
+          Position.Y = 38
+          Width = 30
+          Height = 13
+          Caption = 'Status'
+          end
+
+        Object chkMethodArgString: TCheckBox
+          Left = 8
+          Top = 56
+          Width = 225
+          Height = 17
+          Caption = 'Preserve CRLF in method argument strings'
+          TabOrder = 0
+          end
+
+        Object chkCSVArrays: TCheckBox
+          Position.X = 256
+          Position.Y = 56
+          Width = 153
+          Height = 17
+          Caption = 'Generate CSV for Arrays'
+          TabOrder = 1
+          end
+
+        Object chkSuppressOutput: TCheckBox
+          Position.X = 401
+          Position.Y = 55
+          Width = 153
+          Height = 17
+          Caption = 'Suppress output to window'
+          TabOrder = 2
+          end
+      end
+
+    Object pnlArgs: TPanel
+      Position.X = 0
+      Position.Y = 0
+      Width = 297
+      Height = 400
+      Align = alLeft
+      TabOrder = 3
+      ExplicitHeight = 405
+
+        Object inputScrollBar: TScrollBox
+          Left = 1
+          Top = 42
+          Width = 295
+          Height = 362
+          Align = alClient
+          BevelInner = bvNone
+          BevelOuter = bvNone
+          BorderStyle = bsNone
+          TabOrder = 0
+          end
+
+        Object Panel5: TPanel
+          Position.X = 1
+          Position.Y = 1
+          Width = 295
+          Height = 41
+          Align = alTop
+          BevelOuter = bvNone
+          TabOrder = 1
+
+            Object lblMethodArguments: TLabel
+              Position.X = 10
+              Position.Y = 20
+              Width = 89
+              Height = 13
+              Caption = 'Method Arguments'
+              end
+
+            Object btnHelp: TSpeedButton
+              Position.X = 251
+              Position.Y = 12
+              Width = 21
+              Height = 23
+              Glyph.Data = {
+              06020000424D0602000000000000760000002800000028000000140000000100
+              0400000000009001000000000000000000001000000000000000000000000000
+              8000008000000080800080000000800080008080000080808000C0C0C0000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+              3333333333333333333333333333333333333333333333333333333333333333
+              3333333333330033333333333333333377F33333333333333330FF0333333333
+              33333337F37F333333333333330FFFF0333333333333337F3337F33333333333
+              330FF078033333333333337F37F87F33333333333337FF003333333333333337
+              F377F333333333333330FF733333333333333337F37F33333333333333337FF0
+              33333333333333337F37F3333333333333300FF733333333333333377F37F333
+              33333333330870FF033333333333337F87F37F33333333333330FFFF03333333
+              33333337F3337F333333333333330FF033333333333333337F37F33333333333
+              333330033333333333333333377F333333333333333333003333333333333333
+              3377F33333333333333330FF033333333333333337F37F3333333333333330FF
+              033333333333333337F37F33333333333333330033333333333333333377F333
+              3333333333333333333333333333333333333333333333333333333333333333
+              33333333333333333333}
+              NumGlyphs = 2
+              OnClick = btnHelpClick
+              end
+          end
+      end
+
+    Object SaveDialog: TSaveDialog
+      Left = 217
+      Top = 9
+      end
+
+    Object OpenDialog: TOpenDialog
+      DefaultExt = '*'
+      Filter = 'Any File|*.*'
+      Position.X = 185
+      Position.Y = 9
+      end
+  end

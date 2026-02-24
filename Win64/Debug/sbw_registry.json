@@ -1,0 +1,72 @@
+﻿{
+  "version": 2,
+  "modules": [
+    {
+      "name": "edu.demo.mathserver",
+      "displayName": "Math Server",
+      "moduleType": 1,
+      "commandLine": "D:\\Documents\\Embarcadero\\Studio\\Projects\\SBW_Delphi\\Win64\\Debug\\SBWMathServer.exe",
+      "help": "A simple math server providing trigonometric and arithmetic functions",
+      "services": [
+        {
+          "serviceName": "math",
+          "displayName": "Math Service",
+          "category": "Math",
+          "help": "Provides basic mathematical operations",
+          "methods": [
+            {
+              "signature": "double sin(double)",
+              "help": "Returns the sine of x (in radians)"
+            },
+            {
+              "signature": "double cos(double)",
+              "help": "Returns the cosine of x (in radians)"
+            },
+            {
+              "signature": "double tan(double)",
+              "help": "Returns the tangent of x (in radians)"
+            },
+            {
+              "signature": "double add(double, double)",
+              "help": "Returns the sum of two numbers"
+            },
+            {
+              "signature": "int sum(int[])",
+              "help": "Returns the sum of an array of integers"
+            },
+            {
+              "signature": "double sqrt(double)",
+              "help": "Returns the square root of x"
+            },
+            {
+              "signature": "double pow(double, double)",
+              "help": "Returns base raised to exponent power"
+            },
+            {
+              "signature": "double abs(double)",
+              "help": "Returns the absolute value of x"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "edu.demo.mathclient",
+      "displayName": "",
+      "moduleType": 0,
+      "commandLine": "",
+      "help": "",
+      "services": [
+      ]
+    },
+    {
+      "name": "cmd.browser",
+      "displayName": "",
+      "moduleType": 0,
+      "commandLine": "",
+      "help": "",
+      "services": [
+      ]
+    }
+  ]
+}

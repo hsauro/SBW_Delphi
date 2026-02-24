@@ -1,0 +1,109 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'SBW Inspector'
+  ClientHeight = 600
+  ClientWidth = 948
+  Position = MainFormCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 948.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+  object Layout2: TLayout
+    Align = Bottom
+    Position.Y = 550.000000000000000000
+    Size.Width = 948.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+  object Layout3: TLayout
+    Align = Client
+    Size.Width = 948.000000000000000000
+    Size.Height = 500.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    object TabControl1: TTabControl
+      Align = Client
+      Size.Width = 948.000000000000000000
+      Size.Height = 500.000000000000000000
+      Size.PlatformDefault = False
+      TabIndex = 0
+      TabOrder = 0
+      TabPosition = PlatformDefault
+      Sizes = (
+        948s
+        474s)
+      object tbRunningModules: TTabItem
+        CustomIcon = <
+          item
+          end>
+        IsSelected = True
+        Size.Width = 114.000000000000000000
+        Size.Height = 26.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = ''
+        TabOrder = 0
+        Text = 'Running Modules'
+        ExplicitSize.cx = 114.000000000000000000
+        ExplicitSize.cy = 26.000000000000000000
+        object lbModuleList: TListBox
+          Align = Left
+          Size.Width = 200.000000000000000000
+          Size.Height = 474.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnClick = lbModuleListClick
+          DisableFocusEffect = True
+          DefaultItemStyles.ItemStyle = ''
+          DefaultItemStyles.GroupHeaderStyle = ''
+          DefaultItemStyles.GroupFooterStyle = ''
+          Viewport.Width = 196.000000000000000000
+          Viewport.Height = 470.000000000000000000
+        end
+        object Layout4: TLayout
+          Align = Client
+          Size.Width = 748.000000000000000000
+          Size.Height = 474.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object lbMethods: TListBox
+            Align = Top
+            Size.Width = 748.000000000000000000
+            Size.Height = 320.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            DisableFocusEffect = True
+            DefaultItemStyles.ItemStyle = ''
+            DefaultItemStyles.GroupHeaderStyle = ''
+            DefaultItemStyles.GroupFooterStyle = ''
+            Viewport.Width = 744.000000000000000000
+            Viewport.Height = 316.000000000000000000
+          end
+          object lbDetails: TListBox
+            Align = Client
+            Size.Width = 748.000000000000000000
+            Size.Height = 154.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            DisableFocusEffect = True
+            DefaultItemStyles.ItemStyle = ''
+            DefaultItemStyles.GroupHeaderStyle = ''
+            DefaultItemStyles.GroupFooterStyle = ''
+            Viewport.Width = 744.000000000000000000
+            Viewport.Height = 150.000000000000000000
+          end
+        end
+      end
+    end
+  end
+end

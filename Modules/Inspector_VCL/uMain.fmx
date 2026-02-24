@@ -1,0 +1,153 @@
+object frmMain: TfrmMain
+  Left = 259
+  Top = 218
+  Caption = 'Inspector'
+  ClientHeight = 654
+  ClientWidth = 984
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Left = 259
+  Top = 218
+  DesignerMasterStyle = 0
+  object titlePanel: TPanel
+    Size.Width = 983.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object Label1: TLabel
+      Size.Width = 211.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Left = 11
+      Top = 9
+    end
+  end
+  object btnPanel: TPanel
+    Position.Y = 582.000000000000000000
+    Size.Width = 983.000000000000000000
+    Size.Height = 53.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object Label5: TLabel
+      Position.X = 201.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 13.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object BtnClose: TButton
+      Anchors = [akTop, akRight]
+      Size.Width = 75.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnClick = BtnCloseClick
+      Left = 904
+      Top = 16
+    end
+    object btnStopModule: TButton
+      Anchors = [akTop, akRight]
+      Position.X = 810.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 76.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnClick = btnStopModuleClick
+    end
+    object btnStartModule: TButton
+      Anchors = [akTop, akRight]
+      Enabled = False
+      Position.X = 725.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 76.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      OnClick = btnStartModuleClick
+    end
+    object btnRunMethod: TButton
+      Anchors = [akTop, akRight]
+      Enabled = False
+      Position.X = 637.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 76.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      OnClick = btnRunMethodClick
+    end
+    object Button1: TButton
+      Position.X = 424.000000000000000000
+      Position.Y = 16.000000000000000000
+      Size.Width = 75.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Visible = False
+      OnClick = Button1Click
+    end
+  end
+  object StatusBar: TStatusBar
+    Position.Y = 635.000000000000000000
+    ShowSizeGrip = True
+    Size.Width = 984.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Top = 635
+  end
+  object PopupMenu: TPopupMenu
+    Left = 836
+    Top = 129
+    object mnuRunModule: TMenuItem
+      OnClick = btnStartModuleClick
+    end
+    object N3: TMenuItem
+    end
+    object mnuUnregisterModule_RegTab: TMenuItem
+      OnClick = mnuUnregisterModule_RegTabClick
+    end
+  end
+  object mnuModulePopup: TPopupMenu
+    object mnuRunMethod: TMenuItem
+      OnClick = mnuRunMethodClick
+    end
+    object mnuPopupCopy: TMenuItem
+      OnClick = mnuPopupCopyClick
+    end
+  end
+  object registerPopup: TPopupMenu
+    object mnuRegisterModule: TMenuItem
+      OnClick = mnuRegisterModuleClick
+    end
+    object mnuUnregisterModule: TMenuItem
+      OnClick = mnuUnregisterModuleClick
+    end
+    object N1: TMenuItem
+    end
+    object mnuShutdownModule: TMenuItem
+      OnClick = mnuShutdownModuleClick
+    end
+    object N2: TMenuItem
+    end
+    object mnuCopyModule: TMenuItem
+      OnClick = mnuCopyModuleClick
+    end
+  end
+  object ImageList1: TImageList
+    Source = <>
+    Destination = <>
+    Left = 840
+    Top = 200
+  end
+  object XPManifest1: TXPManifest
+    Left = 728
+    Top = 160
+  end
+end

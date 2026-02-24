@@ -1,0 +1,176 @@
+Object frmRegEdit: TfrmRegEdit
+  Left = 298
+  Top = 379
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Registry Editor'
+  ClientHeight = 270
+  ClientWidth = 631
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+
+    Object Label1: TLabel
+      Position.X = 20
+      Position.Y = 48
+      Width = 65
+      Height = 13
+      Caption = 'Display Name'
+      end
+
+    Object Label2: TLabel
+      Position.X = 16
+      Position.Y = 117
+      Width = 70
+      Height = 13
+      Caption = 'Command Line'
+      end
+
+    Object btnDirectory: TSpeedButton
+      Left = 583
+      Top = 107
+      Width = 33
+      Height = 24
+      Hint = 'Browse for file'
+      Glyph.Data = {
+      4E010000424D4E01000000000000760000002800000012000000120000000100
+      040000000000D800000000000000000000001000000000000000000000000000
+      8000008000000080800080000000800080008080000080808000C0C0C0000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      3333330000003333333333333333330000003333333333333333330000003700
+      000000000003330000003008B8B8B8B8B8B03300000030F08B8B8B8B8B803300
+      000030B0B8B8B8B8B8B80300000030FB0B8B8B8B8B8B0300000030BF08B8B8B8
+      B8B8B000000030FBF000008B8B8B8000000030BFBFBFBF0000000300000030FB
+      FBFBFBFBFB033300000030BFBFBFBFBFBF033300000030FBFBF0000000333300
+      0000330000033333333333000000333333333333333333000000333333333333
+      333333000000333333333333333333000000}
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = btnDirectoryClick
+      end
+
+    Object Label3: TLabel
+      Position.X = 31
+      Position.Y = 81
+      Width = 52
+      Height = 13
+      Caption = 'Help String'
+      end
+
+    Object Label4: TLabel
+      Position.X = 13
+      Position.Y = 195
+      Width = 89
+      Height = 13
+      Caption = 'Management Type'
+      end
+
+    Object Label5: TLabel
+      Position.X = 20
+      Position.Y = 17
+      Width = 66
+      Height = 13
+      Caption = 'Module Name'
+      end
+
+    Object Panel1: TPanel
+      Position.X = 0
+      Position.Y = 229
+      Width = 631
+      Height = 41
+      Align = alBottom
+      BevelOuter = bvNone
+      TabOrder = 0
+      DesignSize = (
+      631
+      41)
+
+        Object BtnOK: TButton
+          Position.X = 450
+          Position.Y = 8
+          Width = 75
+          Height = 25
+          Anchors = [akTop, akRight]
+          Caption = '&OK'
+          ModalResult = 1
+          TabOrder = 0
+          OnClick = BtnOKClick
+          end
+
+        Object BtnCancel: TButton
+          Position.X = 538
+          Position.Y = 8
+          Width = 75
+          Height = 25
+          Anchors = [akTop, akRight]
+          Caption = '&Cancel'
+          ModalResult = 2
+          TabOrder = 1
+          end
+      end
+
+    Object edtDisplayName: TEdit
+      Left = 96
+      Top = 46
+      Width = 521
+      Height = 21
+      TabOrder = 1
+      Text = 'edtDisplayName'
+      end
+
+    Object edtHelpStr: TEdit
+      Position.X = 96
+      Position.Y = 77
+      Width = 521
+      Height = 21
+      TabOrder = 2
+      Text = 'edtHelpStr'
+      end
+
+    Object cboManagementType: TComboBox
+      Position.X = 109
+      Position.Y = 192
+      Width = 116
+      Height = 21
+      ItemHeight = 13
+      TabOrder = 3
+      Text = 'Unique'
+      OnChange = cboManagementTypeChange
+      Items.Strings = (
+      'Unique'
+      'Managed')
+      end
+
+    Object edtCommandLine: TMemo
+      Left = 17
+      Top = 133
+      Width = 600
+      Height = 44
+      Lines.Strings = (
+      'EdtCommandLine')
+      TabOrder = 4
+      end
+
+    Object edtModuleName: TEdit
+      Position.X = 96
+      Position.Y = 15
+      Width = 201
+      Height = 21
+      TabOrder = 5
+      Text = 'EdtDisplayName'
+      end
+
+    Object OpenDialog: TOpenDialog
+      DefaultExt = 'exe'
+      Filter = 'exe|*.exe'
+      Left = 272
+      Top = 190
+      end
+  end

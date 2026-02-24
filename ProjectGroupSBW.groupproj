@@ -1,0 +1,144 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{125B89D1-E713-494E-AE16-1CD3C8C92D48}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ProjectTestBasicStrcuturesSBW.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SBWClientDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SBWBrokerDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SBWModuleDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SBWBroker.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SBWMathClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SBWMathServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SBWBidirectionalDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Modules\Cmd_Browser\Project_Cmd_Browser.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SBWBrokerAPIDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ProjectTestBasicStrcuturesSBW">
+        <MSBuild Projects="ProjectTestBasicStrcuturesSBW.dproj"/>
+    </Target>
+    <Target Name="ProjectTestBasicStrcuturesSBW:Clean">
+        <MSBuild Projects="ProjectTestBasicStrcuturesSBW.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ProjectTestBasicStrcuturesSBW:Make">
+        <MSBuild Projects="ProjectTestBasicStrcuturesSBW.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SBWClientDemo">
+        <MSBuild Projects="SBWClientDemo.dproj"/>
+    </Target>
+    <Target Name="SBWClientDemo:Clean">
+        <MSBuild Projects="SBWClientDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SBWClientDemo:Make">
+        <MSBuild Projects="SBWClientDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SBWBrokerDemo">
+        <MSBuild Projects="SBWBrokerDemo.dproj"/>
+    </Target>
+    <Target Name="SBWBrokerDemo:Clean">
+        <MSBuild Projects="SBWBrokerDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SBWBrokerDemo:Make">
+        <MSBuild Projects="SBWBrokerDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SBWModuleDemo">
+        <MSBuild Projects="SBWModuleDemo.dproj"/>
+    </Target>
+    <Target Name="SBWModuleDemo:Clean">
+        <MSBuild Projects="SBWModuleDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SBWModuleDemo:Make">
+        <MSBuild Projects="SBWModuleDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SBWBroker">
+        <MSBuild Projects="SBWBroker.dproj"/>
+    </Target>
+    <Target Name="SBWBroker:Clean">
+        <MSBuild Projects="SBWBroker.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SBWBroker:Make">
+        <MSBuild Projects="SBWBroker.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SBWMathClient">
+        <MSBuild Projects="SBWMathClient.dproj"/>
+    </Target>
+    <Target Name="SBWMathClient:Clean">
+        <MSBuild Projects="SBWMathClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SBWMathClient:Make">
+        <MSBuild Projects="SBWMathClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SBWMathServer">
+        <MSBuild Projects="SBWMathServer.dproj"/>
+    </Target>
+    <Target Name="SBWMathServer:Clean">
+        <MSBuild Projects="SBWMathServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SBWMathServer:Make">
+        <MSBuild Projects="SBWMathServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SBWBidirectionalDemo">
+        <MSBuild Projects="SBWBidirectionalDemo.dproj"/>
+    </Target>
+    <Target Name="SBWBidirectionalDemo:Clean">
+        <MSBuild Projects="SBWBidirectionalDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SBWBidirectionalDemo:Make">
+        <MSBuild Projects="SBWBidirectionalDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Project_Cmd_Browser">
+        <MSBuild Projects="Modules\Cmd_Browser\Project_Cmd_Browser.dproj"/>
+    </Target>
+    <Target Name="Project_Cmd_Browser:Clean">
+        <MSBuild Projects="Modules\Cmd_Browser\Project_Cmd_Browser.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Project_Cmd_Browser:Make">
+        <MSBuild Projects="Modules\Cmd_Browser\Project_Cmd_Browser.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SBWBrokerAPIDemo">
+        <MSBuild Projects="SBWBrokerAPIDemo.dproj"/>
+    </Target>
+    <Target Name="SBWBrokerAPIDemo:Clean">
+        <MSBuild Projects="SBWBrokerAPIDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SBWBrokerAPIDemo:Make">
+        <MSBuild Projects="SBWBrokerAPIDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ProjectTestBasicStrcuturesSBW;SBWClientDemo;SBWBrokerDemo;SBWModuleDemo;SBWBroker;SBWMathClient;SBWMathServer;SBWBidirectionalDemo;Project_Cmd_Browser;SBWBrokerAPIDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ProjectTestBasicStrcuturesSBW:Clean;SBWClientDemo:Clean;SBWBrokerDemo:Clean;SBWModuleDemo:Clean;SBWBroker:Clean;SBWMathClient:Clean;SBWMathServer:Clean;SBWBidirectionalDemo:Clean;Project_Cmd_Browser:Clean;SBWBrokerAPIDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ProjectTestBasicStrcuturesSBW:Make;SBWClientDemo:Make;SBWBrokerDemo:Make;SBWModuleDemo:Make;SBWBroker:Make;SBWMathClient:Make;SBWMathServer:Make;SBWBidirectionalDemo:Make;Project_Cmd_Browser:Make;SBWBrokerAPIDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
